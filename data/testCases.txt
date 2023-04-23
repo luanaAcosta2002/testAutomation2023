@@ -1,0 +1,310 @@
+Test cases funcionalidad LogIn:
+
+    Exploratorios de Log In
+
+    TC:1
+    Funcionalidad: LOGIN
+    Descripción de la prueba: Iniciar sesión en la página "https://www.saucedemo.com/" de manera exitosa con el primer user proveído.
+    Pasos a seguir:
+        1)Ingresar "standard_user" en el campo "Username"
+        2)Ingresar "secret_sauce" en el campo "Password" 
+        3)Presionar el botón "Login"
+    Resultado obtenido:
+        Login exitoso, nos redirige al inicio de la página.
+    Estado de ejecución:
+        Satisfactorio
+
+    TC:2
+    Funcionalidad: LOGIN
+    Descripción de la prueba: Iniciar sesión en la página "https://www.saucedemo.com/" con el segundo user proveído el cual debería estar bloqueado.
+    Pasos a seguir:
+        1)Ingresar "locked_out_user" en el campo "Username"
+        2)Ingresar "secret_sauce" en el campo "Password" 
+        3)Presionar el botón "Login"
+    Resultado obtenido:
+        Se muestra un cartel rojo el cual dice "Epic sadface: Sorry, this user has been locked out.
+    Estado de ejecución:
+        Satisfactorio
+
+    TC:3
+    Funcionalidad: LOGIN
+    Descripción de la prueba: Iniciar sesión en la página "https://www.saucedemo.com/" con el tercer user proveído el cual nos redirige a una página demo de Swag Labs.
+    Pasos a seguir:
+        1)Ingresar "problem_user" en el campo "Username"
+        2)Ingresar "secret_sauce" en el campo "Password" 
+        3)Presionar el botón "Login"
+    Resultado obtenido:
+        Nos redirige a otro inicio el cual no es el principal.
+    Estado de ejecución:
+        Satisfactorio
+
+    TC:4
+    Funcionalidad: LOGIN
+    Descripción de la prueba: Iniciar sesión en la página "https://www.saucedemo.com/" con el cuarto user proveído el cual nos redirige a la página demo de Swag Labs la cual tiene retrasos al realizar transacciones.
+    Pasos a seguir:
+        1)Ingresar "performance_glitch_user" en el campo "Username"
+        2)Ingresar "secret_sauce" en el campo "Password" 
+        3)Presionar el botón "Login"
+    Resultado obtenido:
+        Nos redirige al inicio de Swag Labs con problemas de performance.
+    Estado de ejecución:
+        Satisfactorio
+    
+    Fin Exploratorios de Log In
+
+
+    TC:5
+    Funcionalidad: LOGIN 
+    Descripción de prueba: Log in con el campo "Username" vacío en la página "https://www.saucedemo.com/".
+    Pasos a seguir:
+        1)Dejar en blanco el campo "Username"
+        2)Ingresar "secret_sauce" en el campo "Password" 
+        3)Presionar el botón "Login"
+    Resultado esperado: 
+        Cartel que anuncie que no se puede iniciar sesión sin un user ingresado.
+    Resultado obtenido:
+        Muestra en pantalla un cartel de advertencia que dice "Epic sadface: Username is required"
+    Estado de ejecución:
+        Satisfactorio
+
+    TC:6
+    Funcionalidad: LOGIN 
+    Descripción de prueba: Log in con el campo "Username" incorrecto en la página "https://www.saucedemo.com/".
+    Pasos a seguir:
+        1)Ingresar "testFailUsername" en el campo "Username"
+        2)Ingresar "secret_sauce" en el campo "Password" 
+        3)Presionar el botón "Login"
+    Resultado esperado: 
+        Cartel que anuncie que el username dado no existe.
+    Resultado obtenido:
+        Muestra en pantalla un cartel de advertencia que dice "Epic sadface: Username and password do not match any user in this service"
+    Estado de ejecución:
+        Satisfactorio
+
+    TC:7
+    Funcionalidad: LOGIN 
+    Descripción de prueba: Log in con el campo "Username" y el campo "Password" vacíos en la página "https://www.saucedemo.com/".
+    Pasos a seguir:
+        1)Ingresar " " en el campo "Username"
+        2)Ingresar " " en el campo "Password" 
+        3)Presionar el botón "Login"
+    Resultado esperado: 
+        Cartel que anuncie que hay que llenar ambos campos para poder ingresar.
+    Resultado obtenido:
+        Muestra en pantalla un cartel de advertencia que dice "Epic sadface: Username is required".
+    Estado de ejecución:
+        Fallo (solo expresa que uno de los campos no está completado).
+
+    TC:8
+    Funcionalidad: LOGIN 
+    Descripción de prueba: Log in con el campo "Password" incorrecto en la página "https://www.saucedemo.com/".
+    Pasos a seguir:
+        1)Ingresar "standard_user" en el campo "Username"
+        2)Ingresar "testFailPassword" en el campo "Password" 
+        3)Presionar el botón "Login"
+    Resultado esperado: 
+        Cartel que anuncie que la contraseña ingresada es incorrecta.
+    Resultado obtenido:
+        Muestra en pantalla un cartel de advertencia que dice "Epic sadface: Username and password do not match any user in this service".
+    Estado de ejecución:
+        Satisfactorio.
+
+    TC:9
+    Funcionalidad: LOGIN 
+    Descripción de prueba: Log in con el campo "Password" vacío en la página "https://www.saucedemo.com/".
+    Pasos a seguir:
+        1)Ingresar "standard_user" en el campo "Username"
+        2)Ingresar " " en el campo "Password" 
+        3)Presionar el botón "Login"
+    Resultado esperado: 
+        Cartel que anuncie que se debe ingresar datos en el campo de password.
+    Resultado obtenido:
+        Muestra en pantalla un cartel de advertencia que dice "Epic sadface: Password is required".
+    Estado de ejecución:
+        Satisfactorio.
+
+    TC:10
+    Funcionalidad: LOGIN 
+    Descripción de prueba: Log in con el campo "Username" y el campo "Password" con datos incorrectos en la página "https://www.saucedemo.com/".
+    Pasos a seguir:
+        1)Ingresar "testFailUsername" en el campo "Username"
+        2)Ingresar "testFailPassword" en el campo "Password" 
+        3)Presionar el botón "Login"
+    Resultado esperado: 
+        Cartel que anuncie que no existe tal usuario en la base de datos para ingresar.
+    Resultado obtenido:
+        Muestra en pantalla un cartel de advertencia que dice "Epic sadface: Username and password do not match any user in this service".
+    Estado de ejecución:
+        Satisfactorio.
+
+    TC:11
+    Funcionalidad: LOGIN 
+    Descripción de prueba: Log in con el campo "Username" en mayúsculas en la página "https://www.saucedemo.com/" para comprobar si diferencia entre mayúsculas y minusculas.
+    Pasos a seguir:
+        1)Ingresar "STANDARD_USER" en el campo "Username"
+        2)Ingresar "secret_sauce" en el campo "Password" 
+        3)Presionar el botón "Login"
+    Resultado esperado: 
+        Cartel que anuncie que no existe tal usuario en la base de datos para ingresar.
+    Resultado obtenido:
+        Muestra en pantalla un cartel de advertencia que dice "Epic sadface: Username and password do not match any user in this service".
+    Estado de ejecución:
+        Satisfactorio.
+
+    TC:12
+    Funcionalidad: LOGIN 
+    Descripción de prueba: Log in con el campo "Password" en mayúsculas en la página "https://www.saucedemo.com/" para comprobar si diferencia entre mayúsculas y minusculas.
+    Pasos a seguir:
+        1)Ingresar "standard_user" en el campo "Username"
+        2)Ingresar "SECRET_SAUCE" en el campo "Password" 
+        3)Presionar el botón "Login"
+    Resultado esperado: 
+        Cartel que anuncie que la contraseña no coincide con el username en la base de datos para ingresar.
+    Resultado obtenido:
+        Muestra en pantalla un cartel de advertencia que dice "Epic sadface: Username and password do not match any user in this service".
+    Estado de ejecución:
+        Satisfactorio.
+
+    
+Test cases funcionalidad Añadir producto en el carrito de compras:
+
+Nota: en el archivo se habla de solo la funcionalidad de "Añadir el producto" por lo tanto la finalización de la compra y remover articulos del carrito no se consideraron en el alcance de la funcionalidad.
+
+    TC:1
+    Funcionalidad: AÑADIR PRODUCTO EN EL CARRITO DE COMPRAS
+    Descripción de la prueba: Añadir un item al carrito en "https://www.saucedemo.com/" desde la página principal y que se refleje en el carrito final.
+    Pasos a seguir:
+        1)Ingresar "standard_user" en el campo "Username"
+        2)Ingresar "secret_sauce" en el campo "Password" 
+        3)Presionar el botón "Login"
+        4)Cliquear el botón "Add to cart" del primer producto (Sauce Labs Backpack)
+        5)Cliquear el icono de carrito de compras
+    Resultado esperado: 
+        Producto se ve añadido en la sección de carrito de compras.
+    Resultado obtenido:
+        Producto se añadió exitosamente en el carrito de compras.
+    Estado de ejecución:
+        Satisfactorio
+
+    TC:2
+    Funcionalidad: AÑADIR PRODUCTO EN EL CARRITO DE COMPRAS
+    Descripción de la prueba: Añadir todos los items al carrito en "https://www.saucedemo.com/" desde la página principal y que se refleje en el carrito final.
+    Pasos a seguir:
+        1)Ingresar "standard_user" en el campo "Username"
+        2)Ingresar "secret_sauce" en el campo "Password" 
+        3)Presionar el botón "Login"
+        4)Cliquear el botón "Add to cart" del primer producto (Sauce Labs Backpack)
+        4)Cliquear el botón "Add to cart" del segundo producto (Sauce Labs Bike Light)
+        4)Cliquear el botón "Add to cart" del tercer producto (Sauce Labs Bolt T-Shirt)
+        4)Cliquear el botón "Add to cart" del cuarto producto (Sauce Labs Fleece Jacket)
+        4)Cliquear el botón "Add to cart" del quinto producto (Sauce Labs Onesie)
+        4)Cliquear el botón "Add to cart" del sexto producto (Test.allTheThings() T-Shirt (Red))
+        5)Cliquear el icono de carrito de compras
+    Resultado esperado: 
+        Productos se reflejan en la sección de carrito de compras.
+    Resultado obtenido:
+        Productos se añadieron exitosamente en el carrito de compras.
+    Estado de ejecución:
+        Satisfactorio
+
+    TC:3
+    Funcionalidad: AÑADIR PRODUCTO EN EL CARRITO DE COMPRAS
+    Descripción de la prueba: Añadir un item al carrito en "https://www.saucedemo.com/" desde la página individual del item y que se refleje en el carrito final.
+    Pasos a seguir:
+        1)Ingresar "standard_user" en el campo "Username"
+        2)Ingresar "secret_sauce" en el campo "Password" 
+        3)Presionar el botón "Login"
+        4)Cliquear el título del primer item (Sauce Labs Backpack)
+        5)Cliquear el botón "Add to cart"
+        5)Cliquear el icono de carrito de compras
+    Resultado esperado: 
+        Producto se ve añadido en la sección de carrito de compras.
+    Resultado obtenido:
+        Producto se añadió exitosamente en el carrito de compras.
+    Estado de ejecución:
+        Satisfactorio
+
+    TC:4
+    Funcionalidad: AÑADIR PRODUCTO EN EL CARRITO DE COMPRAS
+    Descripción de la prueba: Añadir un item al carrito en "https://www.saucedemo.com/" desde la página individual del item y que se refleje en el carrito final.
+    Pasos a seguir:
+        1)Ingresar "standard_user" en el campo "Username"
+        2)Ingresar "secret_sauce" en el campo "Password" 
+        3)Presionar el botón "Login"
+        4)Cliquear el título del primer item (Sauce Labs Bike Light)
+        5)Cliquear el botón "Add to cart"
+        5)Cliquear el icono de carrito de compras
+    Resultado esperado: 
+        Producto se ve añadido en la sección de carrito de compras.
+    Resultado obtenido:
+        Producto se añadió exitosamente en el carrito de compras.
+    Estado de ejecución:
+        Satisfactorio
+
+    TC:5
+    Funcionalidad: AÑADIR PRODUCTO EN EL CARRITO DE COMPRAS
+    Descripción de la prueba: Añadir un item al carrito en "https://www.saucedemo.com/" desde la página individual del item y que se refleje en el carrito final.
+    Pasos a seguir:
+        1)Ingresar "standard_user" en el campo "Username"
+        2)Ingresar "secret_sauce" en el campo "Password" 
+        3)Presionar el botón "Login"
+        4)Cliquear el título del primer item (Sauce Labs Bolt T-Shirt)
+        5)Cliquear el botón "Add to cart"
+        5)Cliquear el icono de carrito de compras
+    Resultado esperado: 
+        Producto se ve añadido en la sección de carrito de compras.
+    Resultado obtenido:
+        Producto se añadió exitosamente en el carrito de compras.
+    Estado de ejecución:
+        Satisfactorio
+    
+    TC:6
+    Funcionalidad: AÑADIR PRODUCTO EN EL CARRITO DE COMPRAS
+    Descripción de la prueba: Añadir un item al carrito en "https://www.saucedemo.com/" desde la página individual del item y que se refleje en el carrito final.
+    Pasos a seguir:
+        1)Ingresar "standard_user" en el campo "Username"
+        2)Ingresar "secret_sauce" en el campo "Password" 
+        3)Presionar el botón "Login"
+        4)Cliquear el título del primer item (Sauce Labs Fleece Jacket)
+        5)Cliquear el botón "Add to cart"
+        5)Cliquear el icono de carrito de compras
+    Resultado esperado: 
+        Producto se ve añadido en la sección de carrito de compras.
+    Resultado obtenido:
+        Producto se añadió exitosamente en el carrito de compras.
+    Estado de ejecución:
+        Satisfactorio
+
+    TC:7
+    Funcionalidad: AÑADIR PRODUCTO EN EL CARRITO DE COMPRAS
+    Descripción de la prueba: Añadir un item al carrito en "https://www.saucedemo.com/" desde la página individual del item y que se refleje en el carrito final.
+    Pasos a seguir:
+        1)Ingresar "standard_user" en el campo "Username"
+        2)Ingresar "secret_sauce" en el campo "Password" 
+        3)Presionar el botón "Login"
+        4)Cliquear el título del primer item (Sauce Labs Onesie)
+        5)Cliquear el botón "Add to cart"
+        5)Cliquear el icono de carrito de compras
+    Resultado esperado: 
+        Producto se ve añadido en la sección de carrito de compras.
+    Resultado obtenido:
+        Producto se añadió exitosamente en el carrito de compras.
+    Estado de ejecución:
+        Satisfactorio
+
+    TC:8
+    Funcionalidad: AÑADIR PRODUCTO EN EL CARRITO DE COMPRAS
+    Descripción de la prueba: Añadir un item al carrito en "https://www.saucedemo.com/" desde la página individual del item y que se refleje en el carrito final.
+    Pasos a seguir:
+        1)Ingresar "standard_user" en el campo "Username"
+        2)Ingresar "secret_sauce" en el campo "Password" 
+        3)Presionar el botón "Login"
+        4)Cliquear el título del primer item (Test.allTheThings() T-Shirt (Red))
+        5)Cliquear el botón "Add to cart"
+        5)Cliquear el icono de carrito de compras
+    Resultado esperado: 
+        Producto se ve añadido en la sección de carrito de compras.
+    Resultado obtenido:
+        Producto se añadió exitosamente en el carrito de compras.
+    Estado de ejecución:
+        Satisfactorio
