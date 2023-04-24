@@ -10,9 +10,6 @@ class Driver:
     def __init__(self):
         self.driver = None
 
-    def aplicacion(self):
-        url = 'https://www.saucedemo.com/'
-        return url
 
     def set_driver(self):
         option = Options()
@@ -21,7 +18,4 @@ class Driver:
         #self.driver = webdriver.Chrome(options=option, service=Service(GeckoDriverManager().install()))
         self.driver = webdriver.Chrome(options=option, service=Service(ChromeDriverManager().install()))
         self.driver.implicitly_wait(30)
-        web = self.aplicacion()
-        self.driver.get(web)
-
         return self.driver

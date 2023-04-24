@@ -1,0 +1,17 @@
+{
+  "test1": {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "errorImgName":""
+  },
+  "test2": {
+    "username": "standard_user",
+    "password": "",
+    "errorImgName":".\\imagen2.png"
+  },
+  "test3": {
+    "username": "",
+    "password": "",
+    "errorImgName":".\\imagen3.png"
+  }
+}
